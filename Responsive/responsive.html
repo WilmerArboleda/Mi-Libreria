@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /** Titulo responsivo con clamp() **/
+
+        .container-titulo{
+            border: solid 2px;
+            max-width: 600px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: clamp(2em, 4vw, 5em);
+        }
+
+        .titulo{
+            font-size: clamp(2rem, 6vw, 8rem);
+            
+        }
+        /** Cuerpo responsivo con flexbox **/
+
+        .container-cuerpo{
+            display: flex;
+            margin: 0 auto;
+            max-width: 90%;
+            flex-wrap: wrap;
+            gap: 7px;
+            border: solid 2px;
+            justify-content: center;
+           
+        }
+
+
+    </style>
+
+    <div class="container-titulo"><h1 class="titulo">Este titulo es responsivo</h1></div>
+    <hr>
+    <div class="container-cuerpo">
+
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/nature" alt="nature">
+        </div>
+
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/people" alt="people">
+        </div>
+
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/any" alt="any">
+        </div>
+
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/animals" alt="animals">
+        </div>
+
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/tech" alt="tech">
+        </div>
+        
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/arch" alt="Architecture">
+        </div>
+
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/nature" alt="nature">
+        </div>
+
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/people" alt="people">
+        </div>
+
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/any" alt="any">
+        </div>
+
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/animals" alt="animals">
+        </div>
+
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/tech" alt="tech">
+        </div>
+        
+        <div class="container-img">
+            <img src="https://placeimg.com/200/200/arch" alt="Architecture">
+        </div>
+    </div>
+</body>
+</html>
