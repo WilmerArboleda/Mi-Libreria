@@ -276,7 +276,7 @@ button:active {
 
 <h3>ilumina bordes</h3>
 
-<button>
+<button class="button3">
     <span></span>
     <span></span>
     <span></span>
@@ -286,7 +286,7 @@ button:active {
   <style>
 
     /* From uiverse.io by @menezes11 */
-button {
+.button3 {
  position: relative;
  padding: 1em 1.8em;
  outline: none;
@@ -303,16 +303,16 @@ button {
  font-weight: bold;
 }
 
-button:hover {
+.button3:hover {
  box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
  transition-delay: 0.6s;
 }
 
-button span {
+.button3 span {
  position: absolute;
 }
 
-button span:nth-child(1) {
+.button3 span:nth-child(1) {
  top: 0;
  left: -100%;
  width: 100%;
@@ -320,12 +320,12 @@ button span:nth-child(1) {
  background: linear-gradient(90deg, transparent, #ae00ff);
 }
 
-button:hover span:nth-child(1) {
+.button3:hover span:nth-child(1) {
  left: 100%;
  transition: 0.7s;
 }
 
-button span:nth-child(3) {
+.button3 span:nth-child(3) {
  bottom: 0;
  right: -100%;
  width: 100%;
@@ -333,13 +333,13 @@ button span:nth-child(3) {
  background: linear-gradient(90deg, transparent, #001eff);
 }
 
-button:hover span:nth-child(3) {
+.button3:hover span:nth-child(3) {
  right: 100%;
  transition: 0.7s;
  transition-delay: 0.35s;
 }
 
-button span:nth-child(2) {
+.button3 span:nth-child(2) {
  top: -100%;
  right: 0;
  width: 2px;
@@ -347,13 +347,13 @@ button span:nth-child(2) {
  background: linear-gradient(180deg, transparent, #ae00ff);
 }
 
-button:hover span:nth-child(2) {
+.button3:hover span:nth-child(2) {
  top: 100%;
  transition: 0.7s;
  transition-delay: 0.17s;
 }
 
-button span:nth-child(4) {
+.button3 span:nth-child(4) {
  bottom: -100%;
  left: 0;
  width: 2px;
@@ -361,13 +361,13 @@ button span:nth-child(4) {
  background: linear-gradient(360deg, transparent, #001eff);
 }
 
-button:hover span:nth-child(4) {
+.button3:hover span:nth-child(4) {
  bottom: 100%;
  transition: 0.7s;
  transition-delay: 0.52s;
 }
 
-button:active {
+.button3:active {
  background: #ae00af;
  background: linear-gradient(to top right, #ae00af, #001eff);
  color: #bfbfbf;
@@ -375,7 +375,7 @@ button:active {
  transition: 0.1s;
 }
 
-button:active span:nth-child(1) 
+.button3:active span:nth-child(1) 
 span:nth-child(2) 
 span:nth-child(2) 
 span:nth-child(2) {
@@ -512,6 +512,7 @@ span:nth-child(2) {
 }
     </style>
 
+
 <h3>descargar</h3>
 
 <button class="download-button">
@@ -592,14 +593,14 @@ span:nth-child(2) {
   </style>
 
 <h3>batman</h3>
-<button>
+<button class="button2">
     <span>PLAY NOW</span>
   </button>
 
   <style>
 
     /* From uiverse.io by @barisdogansutcu */
-button {
+.button2 {
  border: none;
  position: relative;
  width: 200px;
@@ -614,7 +615,7 @@ button {
  transform: translateY(8px)
 }
 
-button:after {
+.button2:after {
  content: '';
  position: absolute;
  left: 0;
@@ -624,11 +625,11 @@ button:after {
  transition: all 2s ease;
 }
 
-button:hover:after {
+.button2:hover:after {
  box-shadow: 0px -13px 56px 12px #ffffffa6;
 }
 
-button span {
+.button2 span {
  position: absolute;
  width: 100%;
  font-size: 15px;
@@ -642,11 +643,11 @@ button span {
  transition: all 2s ease;
 }
 
-button:hover span {
+.button2:hover span {
  color: white;
 }
 
-button:before {
+.button2:before {
  content: '';
  position: absolute;
  width: 0;
@@ -658,25 +659,25 @@ button:before {
  transition: all 1s ease;
 }
 
-button:hover:before {
+.button2:hover:before {
  width: 100%;
 }
 
 
   </style>
 
-<h3>click</h3>
-<button>
+<h3 class="h3">clickee</h3>
+<button class="button1">
     <span class="shadow"></span>
     <span class="edge"></span>
-    <span class="front text"> Click me
+    <span class="front text"> Clickee me
     </span>
   </button>
 
   <style>
 
 /* From uiverse.io */
-button {
+.button1 {
  position: relative;
  border: none;
  background: transparent;
@@ -734,35 +735,35 @@ button {
     cubic-bezier(.3, .7, .4, 1);
 }
 
-button:hover {
+.button1:hover {
  filter: brightness(110%);
 }
 
-button:hover .front {
+.button1:hover .front {
  transform: translateY(-6px);
  transition: transform
     250ms
     cubic-bezier(.3, .7, .4, 1.5);
 }
 
-button:active .front {
+.button1:active .front {
  transform: translateY(-2px);
  transition: transform 34ms;
 }
 
-button:hover .shadow {
+.button1:hover .shadow {
  transform: translateY(4px);
  transition: transform
     250ms
     cubic-bezier(.3, .7, .4, 1.5);
 }
 
-button:active .shadow {
+.button1:active .shadow {
  transform: translateY(1px);
  transition: transform 34ms;
 }
 
-button:focus:not(:focus-visible) {
+.button1:focus:not(:focus-visible) {
  outline: none;
 }
   </style>

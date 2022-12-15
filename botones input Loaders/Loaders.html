@@ -1,425 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loaders</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loaders</title>
 </head>
+
 <body>
-    <h1>Loaders</h1>
-    <br>
+  <h1>Loaders</h1>
+  <br><br>
 
-    <div class="spinner">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        </div>
+  <div class="spinner1">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-        <style>
+  <style>
+    /* From uiverse.io by @AqFox */
+    .spinner1 {
+      width: 44px;
+      height: 44px;
+      animation: spinner-y0fdc1 2s infinite ease;
+      transform-style: preserve-3d;
+    }
 
-            /* From uiverse.io by @AqFox */
-.spinner {
- width: 44px;
- height: 44px;
- animation: spinner-y0fdc1 2s infinite ease;
- transform-style: preserve-3d;
-}
+    .spinner1>div {
+      background-color: rgba(0, 77, 255, 0.2);
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      border: 2px solid #004dff;
+    }
 
-.spinner > div {
- background-color: rgba(0,77,255,0.2);
- height: 100%;
- position: absolute;
- width: 100%;
- border: 2px solid #004dff;
-}
+    .spinner1 div:nth-of-type(1) {
+      transform: translateZ(-22px) rotateY(180deg);
+    }
 
-.spinner div:nth-of-type(1) {
- transform: translateZ(-22px) rotateY(180deg);
-}
+    .spinner1 div:nth-of-type(2) {
+      transform: rotateY(-270deg) translateX(50%);
+      transform-origin: top right;
+    }
 
-.spinner div:nth-of-type(2) {
- transform: rotateY(-270deg) translateX(50%);
- transform-origin: top right;
-}
+    .spinner1 div:nth-of-type(3) {
+      transform: rotateY(270deg) translateX(-50%);
+      transform-origin: center left;
+    }
 
-.spinner div:nth-of-type(3) {
- transform: rotateY(270deg) translateX(-50%);
- transform-origin: center left;
-}
+    .spinner1 div:nth-of-type(4) {
+      transform: rotateX(90deg) translateY(-50%);
+      transform-origin: top center;
+    }
 
-.spinner div:nth-of-type(4) {
- transform: rotateX(90deg) translateY(-50%);
- transform-origin: top center;
-}
+    .spinner1 div:nth-of-type(5) {
+      transform: rotateX(-90deg) translateY(50%);
+      transform-origin: bottom center;
+    }
 
-.spinner div:nth-of-type(5) {
- transform: rotateX(-90deg) translateY(50%);
- transform-origin: bottom center;
-}
+    .spinner1 div:nth-of-type(6) {
+      transform: translateZ(22px);
+    }
 
-.spinner div:nth-of-type(6) {
- transform: translateZ(22px);
-}
+    @keyframes spinner-y0fdc1 {
+      0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+      }
 
-@keyframes spinner-y0fdc1 {
- 0% {
-  transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
- }
+      50% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+      }
 
- 50% {
-  transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
- }
+      100% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+      }
+    }
+  </style>
 
- 100% {
-  transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
- }
-}
-        </style>
+<br><br>
 
+  <div class="loader2"></div>
 
-
-<div class="loader"></div>
-
-<style>
-
+  <style>
     /* From uiverse.io by @satyamchaudharydev */
-.loader {
- --height-of-loader: 4px;
- --loader-color: #0071e2;
- width: 60%;
- height: var(--height-of-loader);
- border-radius: 30px;
- background-color: rgba(0,0,0,0.2);
- position: relative;
-}
+    .loader2 {
+      --height-of-loader: 4px;
+      --loader-color: #0071e2;
+      width: 60%;
+      height: var(--height-of-loader);
+      border-radius: 30px;
+      background-color: rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
 
-.loader::before {
- content: "";
- position: absolute;
- background: var(--loader-color);
- top: 0;
- left: 0;
- width: 0%;
- height: 100%;
- border-radius: 30px;
- animation: moving 1s ease-in-out infinite;
- ;
-}
+    .loader2::before {
+      content: "";
+      position: absolute;
+      background: var(--loader-color);
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      border-radius: 30px;
+      animation: moving 1s ease-in-out infinite;
+      ;
+    }
 
-@keyframes moving {
- 50% {
-  width: 100%;
- }
+    @keyframes moving {
+      50% {
+        width: 100%;
+      }
 
- 100% {
-  width: 0;
-  right: 0;
-  left: unset;
- }
-}
-</style>
-
-
+      100% {
+        width: 0;
+        right: 0;
+        left: unset;
+      }
+    }
+  </style>
 
 
-<div class="spinner"></div>
+<br><br>
 
-<style>
+  <div class="spinner3"></div>
 
+  <style>
     /* From uiverse.io by @EmmaxPlay */
-.spinner {
- position: relative;
- width: 60px;
- height: 60px;
- border-radius: 50%;
-}
+    .spinner3 {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
 
-.spinner::before,
-.spinner:after {
- content: "";
- position: absolute;
- border-radius: inherit;
-}
+    .spinner3::before,
+    .spinner3:after {
+      content: "";
+      position: absolute;
+      border-radius: inherit;
+    }
 
-.spinner:before {
- width: 100%;
- height: 100%;
- background-image: linear-gradient(0deg, #ff00cc 0%, #333399 100%);
- animation: spin8932 .5s infinite linear;
-}
+    .spinner3:before {
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(0deg, #ff00cc 0%, #333399 100%);
+      animation: spin8932 .5s infinite linear;
+    }
 
-.spinner:after {
- width: 85%;
- height: 85%;
- background-color: #212121;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
-}
+    .spinner3:after {
+      width: 85%;
+      height: 85%;
+      background-color: #212121;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-@keyframes spin8932 {
- to {
-  transform: rotate(360deg);
- }
-}
-</style>
+    @keyframes spin8932 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 
 
-<div class="loader"></div>
+<br><br>
 
-<style>
+  <div class="loader4"></div>
 
+  <style>
     /* From uiverse.io by @alexruix */
-.loader {
-  width: 48px;
-  height: 48px;
-  margin: auto;
-  position: relative;
-}
+    .loader4 {
+      width: 48px;
+      height: 48px;
+      margin: auto;
+      position: relative;
+    }
 
-.loader:before {
-  content: '';
-  width: 48px;
-  height: 5px;
-  background: #f0808050;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  border-radius: 50%;
-  animation: shadow324 0.5s linear infinite;
-}
+    .loader4:before {
+      content: '';
+      width: 48px;
+      height: 5px;
+      background: #f0808050;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      border-radius: 50%;
+      animation: shadow324 0.5s linear infinite;
+    }
 
-.loader:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: #f08080;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 4px;
-  animation: jump7456 0.5s linear infinite;
-}
+    .loader4:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: #f08080;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+      animation: jump7456 0.5s linear infinite;
+    }
 
-@keyframes jump7456 {
-  15% {
-    border-bottom-right-radius: 3px;
-  }
+    @keyframes jump7456 {
+      15% {
+        border-bottom-right-radius: 3px;
+      }
 
-  25% {
-    transform: translateY(9px) rotate(22.5deg);
-  }
+      25% {
+        transform: translateY(9px) rotate(22.5deg);
+      }
 
-  50% {
-    transform: translateY(18px) scale(1, .9) rotate(45deg);
-    border-bottom-right-radius: 40px;
-  }
+      50% {
+        transform: translateY(18px) scale(1, .9) rotate(45deg);
+        border-bottom-right-radius: 40px;
+      }
 
-  75% {
-    transform: translateY(9px) rotate(67.5deg);
-  }
+      75% {
+        transform: translateY(9px) rotate(67.5deg);
+      }
 
-  100% {
-    transform: translateY(0) rotate(90deg);
-  }
-}
+      100% {
+        transform: translateY(0) rotate(90deg);
+      }
+    }
 
-@keyframes shadow324 {
+    @keyframes shadow324 {
 
-  0%,
-    100% {
-    transform: scale(1, 1);
-  }
+      0%,
+      100% {
+        transform: scale(1, 1);
+      }
 
-  50% {
-    transform: scale(1.2, 1);
-  }
-}
-</style>
-
-
-<h2>corazon palpitando</h2>
-<div class="loader"><div></div></div>
-
-<style>
+      50% {
+        transform: scale(1.2, 1);
+      }
+    }
+  </style>
 
 
-/* From uiverse.io by @pedertanberg */
-.loader {
- display: inline-block;
- position: relative;
- width: 80px;
- height: 80px;
- transform: rotate(45deg);
- transform-origin: 40px 40px;
-}
+<br><br>
 
-.loader div {
- top: 32px;
- left: 32px;
- position: absolute;
- width: 32px;
- height: 32px;
- background: red;
- animation: loader45 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-}
+  <h2>corazon palpitando</h2>
+  <div class="loader5">
+    <div></div>
+  </div>
 
-.loader div:after,
-.loader div:before {
- content: " ";
- position: absolute;
- display: block;
- width: 32px;
- height: 32px;
- background: red;
-}
+  <style>
+    /* From uiverse.io by @pedertanberg */
+    .loader5 {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+      transform: rotate(45deg);
+      transform-origin: 40px 40px;
+    }
 
-.loader div:before {
- left: -24px;
- border-radius: 50% 0 0 50%;
-}
+    .loader5 div {
+      top: 32px;
+      left: 32px;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background: red;
+      animation: loader45 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
 
-.loader div:after {
- top: -24px;
- border-radius: 50% 50% 0 0;
-}
+    .loader5 div:after,
+    .loader5 div:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: red;
+    }
 
-@keyframes loader45 {
- 0% {
-  transform: scale(0.95);
- }
+    .loader5 div:before {
+      left: -24px;
+      border-radius: 50% 0 0 50%;
+    }
 
- 5% {
-  transform: scale(1.1);
- }
+    .loader5 div:after {
+      top: -24px;
+      border-radius: 50% 50% 0 0;
+    }
 
- 39% {
-  transform: scale(0.85);
- }
+    @keyframes loader45 {
+      0% {
+        transform: scale(0.95);
+      }
 
- 45% {
-  transform: scale(1);
- }
+      5% {
+        transform: scale(1.1);
+      }
 
- 60% {
-  transform: scale(0.95);
- }
+      39% {
+        transform: scale(0.85);
+      }
 
- 100% {
-  transform: scale(0.9);
- }
-}
+      45% {
+        transform: scale(1);
+      }
 
-</style>
+      60% {
+        transform: scale(0.95);
+      }
 
+      100% {
+        transform: scale(0.9);
+      }
+    }
+  </style>
 
-<div class="planet">
-</div>
+<br><br>
 
-<style>
+  <div class="planet">
+  </div>
 
+  <style>
     /* From uiverse.io by @fanishah */
-.planet {
-  display: block;
-  width: 125px;
-  height: 125px;
-  position: relative;
-  transform-style: preserve-3d;
-  border-radius: 50%;
-  background: #fcc96b;
-  background: #fcc96b;
-  background: linear-gradient(
-    180deg,
-    #fcc96b 0%,
-    #fcc96b 15%,
-    #f7ae01 15%,
-    #f7ae01 19%,
-    #fcc96b 19%,
-    #fcc96b 22%,
-    #f7ae01 22%,
-    #f7ae01 28%,
-    #fcc96b 28%,
-    #fcc96b 31%,
-    #fcc96b 33%,
-    #fcc96b 36%,
-    #f7ae01 36%,
-    #f7ae01 48%,
-    #fcc96b 48%,
-    #fcc96b 55%,
-    #f7ae01 55%,
-    #f7ae01 66%,
-    #fcc96b 66%,
-    #fcc96b 70%,
-    #f7ae01 70%,
-    #f7ae01 73%,
-    #fcc96b 73%,
-    #fcc96b 82%,
-    #f7ae01 82%,
-    #c7ba9d 86%,
-    #fcc96b 86%
-  );
-  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25),
-    inset 8px -4px 6px rgba(199, 128, 0, 0.5),
-    inset -8px 4px 8px rgba(255, 235, 199, 0.5), inset 20px -5px 12px #f7ae01,
-    0 0 100px #ffffff59;
-  transform: rotateZ(-15deg);
-}
+    .planet {
+      display: block;
+      width: 125px;
+      height: 125px;
+      position: relative;
+      transform-style: preserve-3d;
+      border-radius: 50%;
+      background: #fcc96b;
+      background: #fcc96b;
+      background: linear-gradient(180deg,
+          #fcc96b 0%,
+          #fcc96b 15%,
+          #f7ae01 15%,
+          #f7ae01 19%,
+          #fcc96b 19%,
+          #fcc96b 22%,
+          #f7ae01 22%,
+          #f7ae01 28%,
+          #fcc96b 28%,
+          #fcc96b 31%,
+          #fcc96b 33%,
+          #fcc96b 36%,
+          #f7ae01 36%,
+          #f7ae01 48%,
+          #fcc96b 48%,
+          #fcc96b 55%,
+          #f7ae01 55%,
+          #f7ae01 66%,
+          #fcc96b 66%,
+          #fcc96b 70%,
+          #f7ae01 70%,
+          #f7ae01 73%,
+          #fcc96b 73%,
+          #fcc96b 82%,
+          #f7ae01 82%,
+          #c7ba9d 86%,
+          #fcc96b 86%);
+      box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25),
+        inset 8px -4px 6px rgba(199, 128, 0, 0.5),
+        inset -8px 4px 8px rgba(255, 235, 199, 0.5), inset 20px -5px 12px #f7ae01,
+        0 0 100px #ffffff59;
+      transform: rotateZ(-15deg);
+    }
 
-.planet::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  border: 16px solid #e1a519;
-  border-top-width: 0;
-  border-radius: 50%;
-  box-shadow: 0 -2px 0 #c18620;
-  animation: rings1 0.8s infinite linear;
-}
+    .planet::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: 16px solid #e1a519;
+      border-top-width: 0;
+      border-radius: 50%;
+      box-shadow: 0 -2px 0 #c18620;
+      animation: rings1 0.8s infinite linear;
+    }
 
-.planet::after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  border: 8px solid #d48b0c;
-  border-top-width: 0;
-  border-radius: 50%;
-  box-shadow: 0 -2px 0 #b99309;
-  animation: rings2 0.8s infinite linear;
-}
+    .planet::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: 8px solid #d48b0c;
+      border-top-width: 0;
+      border-radius: 50%;
+      box-shadow: 0 -2px 0 #b99309;
+      animation: rings2 0.8s infinite linear;
+    }
 
-@keyframes rings1 {
-  0% {
-    transform: rotateX(65deg) rotateZ(0deg) scale(1.75);
-  }
+    @keyframes rings1 {
+      0% {
+        transform: rotateX(65deg) rotateZ(0deg) scale(1.75);
+      }
 
-  100% {
-    transform: rotateX(65deg) rotateZ(360deg) scale(1.75);
-  }
-}
+      100% {
+        transform: rotateX(65deg) rotateZ(360deg) scale(1.75);
+      }
+    }
 
-@keyframes rings2 {
-  0% {
-    transform: rotateX(65deg) rotateZ(0deg) scale(1.7);
-  }
+    @keyframes rings2 {
+      0% {
+        transform: rotateX(65deg) rotateZ(0deg) scale(1.7);
+      }
 
-  100% {
-    transform: rotateX(65deg) rotateZ(360deg) scale(1.7);
-  }
-}
-</style>
+      100% {
+        transform: rotateX(65deg) rotateZ(360deg) scale(1.7);
+      }
+    }
+  </style>
 
 
 
 
 </body>
+
 </html>

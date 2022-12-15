@@ -1,266 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boton Swich</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylos.css">
+  <title>Boton Swich</title>
 </head>
+
 <body>
-    <h1>Boton Swich</h1>
+  <h1> Boton Swich</h1>
 
-    <br><br>
+  <br><br>
 
-    <!--##########################-->
+<div class="centrar">
+
+  <label class="switch">
+    <div class="round"><input name="onoff" id="onoff" type="checkbox">
+      <div class="back"><label for="onoff" class="but"><span class="on">0</span><span class="off">I</span></label></div>
+    </div>
+  </label>
+
+</div>
+
+
+
+  <style>
+    /* From uiverse.io by @mrhyddenn */
+    input {
+      display: none
+    }
+
+    .on,
+    .off {
+      position: absolute;
+      text-align: center;
+      text-shadow: inset 1px 1px 1px black;
+      width: 100%;
+    }
+
+    .on {
+      color: #fff;
+      top: 10px;
+      transition: all 0.1s;
+      font-family: sans-serif
+    }
+
+    .off {
+      color: #636161;
+      bottom: 5px;
+      transition: all 0.1s;
+      transform: scaleY(0.85);
+    }
+
+    .but {
+      background-color: #000;
+      border-radius: 400px 400px 400px 400px / 400px 400px 300px 300px;
+      border-bottom-width: 0px;
+      box-shadow: inset 8px 6px 5px -7px rgba(0, 0, 0, 1), inset -8px 6px 5px -7px rgba(0, 0, 0, 1), inset 0 -3px 2px -2px rgba(200, 200, 200, .5), 0 3px 3px -2px rgba(0, 0, 0, 1), inset 0 -230px 60px -200px rgba(255, 255, 255, .2), inset 0 220px 40px -200px rgba(0, 0, 0, .3);
+      display: block;
+      font-size: 17px;
+      height: 60px;
+      position: relative;
+      transition: all 0.2s;
+      width: 40px;
+    }
+
+    .back {
+      background-color: #000;
+      background-image: -webkit-linear-gradient(0deg, transparent 30%, transparent 65%), -webkit-linear-gradient(0deg, rgba(245, 245, 245, 0) 30%, rgba(150, 150, 150, .1) 50%, rgba(150, 150, 150, 0) 70%);
+      border-radius: 115px;
+      box-sizing: border-box;
+      height: 85px;
+      padding: 4px 4px;
+      transition: all 0.2s;
+      width: 50px;
+    }
+
+    input:checked+.back .on,
+    input:checked+.back .off {
+      text-shadow: inset 1px 1px 1px black;
+    }
+
+    input:checked+.back .on {
+      color: rgb(141, 141, 141);
+      top: 10px;
+      transform: scaleY(0.85);
+    }
+
+    input:checked+.back .off {
+      color: #fff;
+      bottom: 5px;
+      transform: scaleY(1);
+    }
+
+    input:checked+.back .but {
+      background: #232323;
+      background-image: -webkit-radial-gradient(55% 18%, circle closest-corner, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
+      border-radius: 410px 410px 410px 410px / 310px 310px 410px 410px;
+      box-shadow: inset 8px -4px 5px -7px rgba(0, 0, 0, 1), inset -8px -4px 5px -7px rgba(0, 0, 0, 1), 0 -3px 8px -4px rgba(250, 250, 250, .4), inset 0 3px 4px -2px rgba(10, 10, 10, 1), inset 0 280px 40px -200px rgba(0, 0, 0, .2), inset 0 -200px 40px -200px rgba(180, 180, 180, .2);
+      margin-top: 20px;
+    }
+
+    input:checked+.back {
+      background-image: -webkit-linear-gradient(90deg, black 30%, transparent 65%), -webkit-linear-gradient(180deg, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, .4) 50%, rgba(150, 150, 150, 0) 100%);
+      box-shadow: 28px 28px 28px -28px rgba(0, 0, 0, .1), -28px 28px 28px -22px rgba(0, 0, 0, .1), 0 30px 30px 0px rgba(0, 0, 0, .2), inset 0 1px 2px 0 rgba(0, 0, 0, .6);
+      padding: 2px 4px;
+    }
+
+    .l,
+    .r {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .round,
+    #onoff,
+    .back,
+    .but,
+    .on,
+    .off {
+      user-select: none;
+    }
+  </style>
+
+
+
+  <!--##########################-->
+  <div class="centrar">
 
     <div class="toggleWrapper">
-        <input type="checkbox" class="dn" id="dn">
-        <label for="dn" class="toggle">
-            <span class="toggle__handler">
-                <span class="crater crater--1"></span>
-                <span class="crater crater--2"></span>
-                <span class="crater crater--3"></span>
-            </span>
-            <span class="star star--1"></span>
-            <span class="star star--2"></span>
-            <span class="star star--3"></span>
-            <span class="star star--4"></span>
-            <span class="star star--5"></span>
-            <span class="star star--6"></span>
-        </label>
+      <input type="checkbox" class="dn" id="dn">
+      <label for="dn" class="toggle">
+        <span class="toggle__handler">
+          <span class="crater crater--1"></span>
+          <span class="crater crater--2"></span>
+          <span class="crater crater--3"></span>
+        </span>
+        <span class="star star--1"></span>
+        <span class="star star--2"></span>
+        <span class="star star--3"></span>
+        <span class="star star--4"></span>
+        <span class="star star--5"></span>
+        <span class="star star--6"></span>
+      </label>
     </div>
-<!--##############################################-->
-    <style>
 
-        /* From uiverse.io by @mobinkakei */
-.toggleWrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  overflow: hidden;
-  padding: 0 200px;
-  transform: translate3d(-50%, -50%, 0);
-  color: white;
-}
+  </div>
+  <!--##############################################-->
+  <style>
+    /* From uiverse.io by @mobinkakei */
+    .toggleWrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      overflow: hidden;
+      padding: 0 200px;
+      transform: translate3d(-50%, -50%, 0);
+      color: white;
+    }
 
-.toggleWrapper input {
-  position: absolute;
-  left: -99em;
-}
+    .toggleWrapper input {
+      position: absolute;
+      left: -99em;
+    }
 
-.toggle {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  width: 90px;
-  height: 50px;
-  background-color: #83d8ff;
-  border-radius: 84px;
-  transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
+    .toggle {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      width: 90px;
+      height: 50px;
+      background-color: #83d8ff;
+      border-radius: 84px;
+      transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
 
-.toggle:before {
-  content: 'AM';
-  position: absolute;
-  left: -50px;
-  top: 15px;
-  font-size: 18px;
-}
+    .toggle:before {
+      content: 'AM';
+      position: absolute;
+      left: -50px;
+      top: 15px;
+      font-size: 18px;
+    }
 
-.toggle:after {
-  content: 'PM';
-  position: absolute;
-  right: -48px;
-  top: 15px;
-  font-size: 18px;
-  color: #749ed7;
-}
+    .toggle:after {
+      content: 'PM';
+      position: absolute;
+      right: -48px;
+      top: 15px;
+      font-size: 18px;
+      color: #749ed7;
+    }
 
-.toggle__handler {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  top: 3px;
-  left: 3px;
-  width: 44px;
-  height: 44px;
-  background-color: #ffcf96;
-  border-radius: 50px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
-  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transform: rotate(-45deg);
-}
+    .toggle__handler {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      top: 3px;
+      left: 3px;
+      width: 44px;
+      height: 44px;
+      background-color: #ffcf96;
+      border-radius: 50px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+      transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transform: rotate(-45deg);
+    }
 
-.toggle__handler .crater {
-  position: absolute;
-  background-color: #e8cda5;
-  opacity: 0;
-  transition: opacity 200ms ease-in-out;
-  border-radius: 100%;
-}
+    .toggle__handler .crater {
+      position: absolute;
+      background-color: #e8cda5;
+      opacity: 0;
+      transition: opacity 200ms ease-in-out;
+      border-radius: 100%;
+    }
 
-.toggle__handler .crater--1 {
-  top: 18px;
-  left: 10px;
-  width: 4px;
-  height: 4px;
-}
+    .toggle__handler .crater--1 {
+      top: 18px;
+      left: 10px;
+      width: 4px;
+      height: 4px;
+    }
 
-.toggle__handler .crater--2 {
-  top: 28px;
-  left: 22px;
-  width: 6px;
-  height: 6px;
-}
+    .toggle__handler .crater--2 {
+      top: 28px;
+      left: 22px;
+      width: 6px;
+      height: 6px;
+    }
 
-.toggle__handler .crater--3 {
-  top: 10px;
-  left: 25px;
-  width: 8px;
-  height: 8px;
-}
+    .toggle__handler .crater--3 {
+      top: 10px;
+      left: 25px;
+      width: 8px;
+      height: 8px;
+    }
 
-.star {
-  position: absolute;
-  background-color: #fff;
-  transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  border-radius: 50%;
-}
+    .star {
+      position: absolute;
+      background-color: #fff;
+      transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      border-radius: 50%;
+    }
 
-.star--1 {
-  top: 10px;
-  left: 35px;
-  z-index: 0;
-  width: 30px;
-  height: 3px;
-}
+    .star--1 {
+      top: 10px;
+      left: 35px;
+      z-index: 0;
+      width: 30px;
+      height: 3px;
+    }
 
-.star--2 {
-  top: 18px;
-  left: 28px;
-  z-index: 1;
-  width: 30px;
-  height: 3px;
-}
+    .star--2 {
+      top: 18px;
+      left: 28px;
+      z-index: 1;
+      width: 30px;
+      height: 3px;
+    }
 
-.star--3 {
-  top: 27px;
-  left: 40px;
-  z-index: 0;
-  width: 30px;
-  height: 3px;
-}
+    .star--3 {
+      top: 27px;
+      left: 40px;
+      z-index: 0;
+      width: 30px;
+      height: 3px;
+    }
 
-.star--4, .star--5, .star--6 {
-  opacity: 0;
-  transition: all 300ms 0 cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
+    .star--4,
+    .star--5,
+    .star--6 {
+      opacity: 0;
+      transition: all 300ms 0 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
 
-.star--4 {
-  top: 16px;
-  left: 11px;
-  z-index: 0;
-  width: 2px;
-  height: 2px;
-  transform: translate3d(3px, 0, 0);
-}
+    .star--4 {
+      top: 16px;
+      left: 11px;
+      z-index: 0;
+      width: 2px;
+      height: 2px;
+      transform: translate3d(3px, 0, 0);
+    }
 
-.star--5 {
-  top: 32px;
-  left: 17px;
-  z-index: 0;
-  width: 3px;
-  height: 3px;
-  transform: translate3d(3px, 0, 0);
-}
+    .star--5 {
+      top: 32px;
+      left: 17px;
+      z-index: 0;
+      width: 3px;
+      height: 3px;
+      transform: translate3d(3px, 0, 0);
+    }
 
-.star--6 {
-  top: 36px;
-  left: 28px;
-  z-index: 0;
-  width: 2px;
-  height: 2px;
-  transform: translate3d(3px, 0, 0);
-}
+    .star--6 {
+      top: 36px;
+      left: 28px;
+      z-index: 0;
+      width: 2px;
+      height: 2px;
+      transform: translate3d(3px, 0, 0);
+    }
 
-input:checked + .toggle {
-  background-color: #749dd6;
-}
+    input:checked+.toggle {
+      background-color: #749dd6;
+    }
 
-input:checked + .toggle:before {
-  color: #749ed7;
-}
+    input:checked+.toggle:before {
+      color: #749ed7;
+    }
 
-input:checked + .toggle:after {
-  color: #fff;
-}
+    input:checked+.toggle:after {
+      color: #fff;
+    }
 
-input:checked + .toggle .toggle__handler {
-  background-color: #ffe5b5;
-  transform: translate3d(40px, 0, 0) rotate(0);
-}
+    input:checked+.toggle .toggle__handler {
+      background-color: #ffe5b5;
+      transform: translate3d(40px, 0, 0) rotate(0);
+    }
 
-input:checked + .toggle .toggle__handler .crater {
-  opacity: 1;
-}
+    input:checked+.toggle .toggle__handler .crater {
+      opacity: 1;
+    }
 
-input:checked + .toggle .star--1 {
-  width: 2px;
-  height: 2px;
-}
+    input:checked+.toggle .star--1 {
+      width: 2px;
+      height: 2px;
+    }
 
-input:checked + .toggle .star--2 {
-  width: 4px;
-  height: 4px;
-  transform: translate3d(-5px, 0, 0);
-}
+    input:checked+.toggle .star--2 {
+      width: 4px;
+      height: 4px;
+      transform: translate3d(-5px, 0, 0);
+    }
 
-input:checked + .toggle .star--3 {
-  width: 2px;
-  height: 2px;
-  transform: translate3d(-7px, 0, 0);
-}
+    input:checked+.toggle .star--3 {
+      width: 2px;
+      height: 2px;
+      transform: translate3d(-7px, 0, 0);
+    }
 
-input:checked + .toggle .star--4, input:checked + .toggle .star--5, input:checked + .toggle .star--6 {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
+    input:checked+.toggle .star--4,
+    input:checked+.toggle .star--5,
+    input:checked+.toggle .star--6 {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
 
-input:checked + .toggle .star--4 {
-  transition: all 300ms 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
+    input:checked+.toggle .star--4 {
+      transition: all 300ms 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
 
-input:checked + .toggle .star--5 {
-  transition: all 300ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
+    input:checked+.toggle .star--5 {
+      transition: all 300ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
 
-input:checked + .toggle .star--6 {
-  transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
- 
+    input:checked+.toggle .star--6 {
+      transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+  </style>
 
-    </style>
-
-
-
-
-<!--##########################-->
-
-
-<label class="rocker rocker-small">
-    <input type="checkbox">
-    <span class="switch-left">Yes</span>
-    <span class="switch-right">No</span>
-</label>
 <br><br>
-<style>
 
+  <!--##########################-->
+
+  <div class="centrar">
+
+    <label class="rocker rocker-small centrar">
+      <input type="checkbox">
+      <span class="switch-left">Yes</span>
+      <span class="switch-right">No</span>
+    </label>
+
+  </div>
+
+  <br><br>
+  <style>
     /* From uiverse.io by @bandirevanth */
-/* Switch starts here */
-.rocker {
-  display: inline-block;
-  position: relative;
-  /*
+    /* Switch starts here */
+    .rocker {
+      display: inline-block;
+      position: relative;
+      /*
   SIZE OF SWITCH
   ==============
   All sizes are in em - therefore
@@ -268,476 +390,380 @@ input:checked + .toggle .star--6 {
   will change the size of the switch.
   See .rocker-small below as example.
   */
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  color: #888;
-  width: 7em;
-  height: 4em;
-  overflow: hidden;
-  border-bottom: 0.5em solid #eee;
-}
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      color: #888;
+      width: 7em;
+      height: 4em;
+      overflow: hidden;
+      border-bottom: 0.5em solid #eee;
+    }
 
-.rocker-small {
-  font-size: 0.75em;
- /* Sizes the switch */
-  margin: 1em;
-}
+    .rocker-small {
+      font-size: 0.75em;
+      /* Sizes the switch */
+      margin: 1em;
+    }
 
-.rocker::before {
-  content: "";
-  position: absolute;
-  top: 0.5em;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #999;
-  border: 0.5em solid #eee;
-  border-bottom: 0;
-}
+    .rocker::before {
+      content: "";
+      position: absolute;
+      top: 0.5em;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #999;
+      border: 0.5em solid #eee;
+      border-bottom: 0;
+    }
 
-.rocker input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+    .rocker input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
 
-.switch-left,
-.switch-right {
-  cursor: pointer;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.5em;
-  width: 3em;
-  transition: 0.2s;
-  user-select: none;
-}
+    .switch-left,
+    .switch-right {
+      cursor: pointer;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.5em;
+      width: 3em;
+      transition: 0.2s;
+      user-select: none;
+    }
 
-.switch-left {
-  height: 2.4em;
-  width: 2.75em;
-  left: 0.85em;
-  bottom: 0.4em;
-  background-color: #ddd;
-  transform: rotate(15deg) skewX(15deg);
-}
+    .switch-left {
+      height: 2.4em;
+      width: 2.75em;
+      left: 0.85em;
+      bottom: 0.4em;
+      background-color: #ddd;
+      transform: rotate(15deg) skewX(15deg);
+    }
 
-.switch-right {
-  right: 0.5em;
-  bottom: 0;
-  background-color: #bd5757;
-  color: #fff;
-}
+    .switch-right {
+      right: 0.5em;
+      bottom: 0;
+      background-color: #bd5757;
+      color: #fff;
+    }
 
-.switch-left::before,
-.switch-right::before {
-  content: "";
-  position: absolute;
-  width: 0.4em;
-  height: 2.45em;
-  bottom: -0.45em;
-  background-color: #ccc;
-  transform: skewY(-65deg);
-}
+    .switch-left::before,
+    .switch-right::before {
+      content: "";
+      position: absolute;
+      width: 0.4em;
+      height: 2.45em;
+      bottom: -0.45em;
+      background-color: #ccc;
+      transform: skewY(-65deg);
+    }
 
-.switch-left::before {
-  left: -0.4em;
-}
+    .switch-left::before {
+      left: -0.4em;
+    }
 
-.switch-right::before {
-  right: -0.375em;
-  background-color: transparent;
-  transform: skewY(65deg);
-}
+    .switch-right::before {
+      right: -0.375em;
+      background-color: transparent;
+      transform: skewY(65deg);
+    }
 
-input:checked + .switch-left {
-  background-color: #0084d0;
-  color: #fff;
-  bottom: 0px;
-  left: 0.5em;
-  height: 2.5em;
-  width: 3em;
-  transform: rotate(0deg) skewX(0deg);
-}
+    input:checked+.switch-left {
+      background-color: #0084d0;
+      color: #fff;
+      bottom: 0px;
+      left: 0.5em;
+      height: 2.5em;
+      width: 3em;
+      transform: rotate(0deg) skewX(0deg);
+    }
 
-input:checked + .switch-left::before {
-  background-color: transparent;
-  width: 3.0833em;
-}
+    input:checked+.switch-left::before {
+      background-color: transparent;
+      width: 3.0833em;
+    }
 
-input:checked + .switch-left + .switch-right {
-  background-color: #ddd;
-  color: #888;
-  bottom: 0.4em;
-  right: 0.8em;
-  height: 2.4em;
-  width: 2.75em;
-  transform: rotate(-15deg) skewX(-15deg);
-}
+    input:checked+.switch-left+.switch-right {
+      background-color: #ddd;
+      color: #888;
+      bottom: 0.4em;
+      right: 0.8em;
+      height: 2.4em;
+      width: 2.75em;
+      transform: rotate(-15deg) skewX(-15deg);
+    }
 
-input:checked + .switch-left + .switch-right::before {
-  background-color: #ccc;
-}
+    input:checked+.switch-left+.switch-right::before {
+      background-color: #ccc;
+    }
 
-/* Keyboard Users */
-input:focus + .switch-left {
-  color: #333;
-}
+    /* Keyboard Users */
+    input:focus+.switch-left {
+      color: #333;
+    }
 
-input:checked:focus + .switch-left {
-  color: #fff;
-}
+    input:checked:focus+.switch-left {
+      color: #fff;
+    }
 
-input:focus + .switch-left + .switch-right {
-  color: #fff;
-}
+    input:focus+.switch-left+.switch-right {
+      color: #fff;
+    }
 
-input:checked:focus + .switch-left + .switch-right {
-  color: #333;
-}
-</style>
-
-
-<br><br>
-
-<!--##########################-->
+    input:checked:focus+.switch-left+.switch-right {
+      color: #333;
+    }
+  </style>
 
 
-<div class="love">
-    <input id="switch" type="checkbox">
-    <label class="love-heart" for="switch">
-      <i class="left"></i>
-      <i class="right"></i>
-      <i class="bottom"></i>
-      <div class="round"></div>
+  <br><br>
+  
+
+  <!--##########################-->
+  <div class="centrar">
+
+    <div class="love">
+      <input id="switch" type="checkbox">
+      <label class="love-heart" for="switch">
+        <i class="left"></i>
+        <i class="right"></i>
+        <i class="bottom"></i>
+        <div class="round"></div>
+      </label>
+    </div>
+
+  </div>
+  <style>
+    /* From uiverse.io by @barisdogansutcu */
+    .love-heart:before,
+    #switch {
+      display: none;
+    }
+
+    .love-heart,
+    .love-heart::after {
+      border-color: hsl(231deg 28% 86%);
+      border: 1px solid;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      width: 10px;
+      height: 8px;
+      border-bottom: 0
+    }
+
+    .round {
+      position: absolute;
+      z-index: 1;
+      width: 8px;
+      height: 8px;
+      background: hsl(0deg 0% 100%);
+      box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+      border-radius: 100%;
+      left: 0px;
+      bottom: -1px;
+      transition: all .5s ease;
+      animation: check-animation2 .5s forwards;
+    }
+
+    input:checked+label .round {
+      transform: translate(0px, 0px);
+      animation: check-animation .5s forwards;
+      background-color: hsl(0deg 0% 100%);
+    }
+
+    @keyframes check-animation {
+      0% {
+        transform: translate(0px, 0px);
+      }
+
+      50% {
+        transform: translate(0px, 7px);
+      }
+
+      100% {
+        transform: translate(7px, 7px);
+      }
+    }
+
+    @keyframes check-animation2 {
+      0% {
+        transform: translate(7px, 7px);
+      }
+
+      50% {
+        transform: translate(0px, 7px);
+      }
+
+      100% {
+        transform: translate(0px, 0px);
+      }
+    }
+
+    .love-heart {
+      box-sizing: border-box;
+      position: relative;
+      transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+      display: block;
+      border-color: hsl(231deg 28% 86%);
+      cursor: pointer;
+      top: 0;
+    }
+
+    input:checked+.love-heart,
+    input:checked+.love-heart::after,
+    input:checked+.love-heart .bottom {
+      border-color: hsl(347deg 81% 61%);
+      box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
+    }
+
+    .love-heart::after,
+    .love-heart .bottom {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      border-color: hsl(231deg 28% 86%);
+    }
+
+    .love-heart::after {
+      right: -9px;
+      transform: rotate(90deg);
+      top: 7px;
+    }
+
+    .love-heart .bottom {
+      width: 11px;
+      height: 11px;
+      border-left: 1px solid;
+      border-bottom: 1px solid;
+      border-color: hsl(231deg 28% 86%);
+      left: -1px;
+      top: 5px;
+      border-radius: 0px 0px 0px 5px;
+    }
+  </style>
+
+  <br><br>
+  <hr>
+  <hr>
+
+  <!--##########################-->
+
+
+  <br><br>
+  
+
+  <!--##########################-->
+
+  <div class="centrar">
+
+    <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button">
+    <label for="favorite" class="container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-heart">
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+        </path>
+      </svg>
+      <div class="action">
+        <span class="option-1">Add to Favorites</span>
+        <span class="option-2">Added to Favorites</span>
+      </div>
     </label>
+
   </div>
 
   <style>
-
     /* From uiverse.io by @barisdogansutcu */
-.love-heart:before,#switch {
- display: none;
-}
+    label {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 15px 10px 10px;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 10px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      color: black;
+    }
 
-.love-heart, .love-heart::after {
- border-color: hsl(231deg 28% 86%);
- border: 1px solid;
- border-top-left-radius: 100px;
- border-top-right-radius: 100px;
- width: 10px;
- height: 8px;
- border-bottom: 0
-}
+    input {
+      display: none;
+    }
 
-.round {
- position: absolute;
- z-index: 1;
- width: 8px;
- height: 8px;
- background: hsl(0deg 0% 100%);
- box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
- border-radius: 100%;
- left: 0px;
- bottom: -1px;
- transition: all .5s ease;
- animation: check-animation2 .5s forwards;
-}
+    input:checked+label svg {
+      fill: hsl(0deg 100% 50%);
+      stroke: hsl(0deg 100% 50%);
+      animation: heartButton 1s;
+    }
 
-input:checked + label .round {
- transform: translate(0px, 0px);
- animation: check-animation .5s forwards;
- background-color: hsl(0deg 0% 100%);
-}
+    @keyframes heartButton {
+      0% {
+        transform: scale(1);
+      }
 
-@keyframes check-animation {
- 0% {
-  transform: translate(0px, 0px);
- }
+      25% {
+        transform: scale(1.3);
+      }
 
- 50% {
-  transform: translate(0px, 7px);
- }
+      50% {
+        transform: scale(1);
+      }
 
- 100% {
-  transform: translate(7px, 7px);
- }
-}
+      75% {
+        transform: scale(1.3);
+      }
 
-@keyframes check-animation2 {
- 0% {
-  transform: translate(7px, 7px);
- }
+      100% {
+        transform: scale(1);
+      }
+    }
 
- 50% {
-  transform: translate(0px, 7px);
- }
+    input+label .action {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+    }
 
- 100% {
-  transform: translate(0px, 0px);
- }
-}
+    input+label .action span {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 1;
+      transition: all .5s;
+    }
 
-.love-heart {
- box-sizing: border-box;
- position: relative;
- transform: rotate(-45deg) translate(-50%, -33px) scale(4);
- display: block;
- border-color: hsl(231deg 28% 86%);
- cursor: pointer;
- top: 0;
-}
+    input+label .action span.option-1 {
+      transform: translate(0px, 0%);
+      opacity: 1;
+    }
 
-input:checked + .love-heart, input:checked + .love-heart::after, input:checked + .love-heart .bottom {
- border-color: hsl(347deg 81% 61%);
- box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
-}
+    input:checked+label .action span.option-1 {
+      transform: translate(0px, -100%);
+      opacity: 0;
+    }
 
-.love-heart::after, .love-heart .bottom {
- content: "";
- display: block;
- box-sizing: border-box;
- position: absolute;
- border-color: hsl(231deg 28% 86%);
-}
+    input+label .action span.option-2 {
+      transform: translate(0px, 100%);
+      opacity: 0;
+    }
 
-.love-heart::after {
- right: -9px;
- transform: rotate(90deg);
- top: 7px;
-}
-
-.love-heart .bottom {
- width: 11px;
- height: 11px;
- border-left: 1px solid;
- border-bottom: 1px solid;
- border-color: hsl(231deg 28% 86%);
- left: -1px;
- top: 5px;
- border-radius: 0px 0px 0px 5px;
-}
-
+    input:checked+label .action span.option-2 {
+      transform: translate(0px, 0%);
+      opacity: 1;
+    }
   </style>
-  
-<br><br>
-
-<!--##########################-->
-
-
-<label class="switch">
-    <div class="round"><input name="onoff" id="onoff" type="checkbox">
-        <div class="back"><label for="onoff" class="but"><span class="on">0</span><span class="off">I</span></label></div>
-    </div>
-</label>
-
-<style>
-
-    /* From uiverse.io by @mrhyddenn */
-input {
-  display: none
-}
-
-.on,.off {
-  position: absolute;
-  text-align: center;
-  text-shadow: inset 1px 1px 1px black;
-  width: 100%;
-}
-
-.on {
-  color: #fff;
-  top: 10px;
-  transition: all 0.1s;
-  font-family: sans-serif
-}
-
-.off {
-  color: #636161;
-  bottom: 5px;
-  transition: all 0.1s;
-  transform: scaleY(0.85);
-}
-
-.but {
-  background-color: #000;
-  border-radius: 400px 400px 400px 400px / 400px 400px 300px 300px;
-  border-bottom-width: 0px;
-  box-shadow: inset 8px 6px 5px -7px rgba(0,0,0,1)
-    ,inset -8px 6px 5px -7px rgba(0,0,0,1)
-    ,inset 0 -3px 2px -2px rgba(200,200,200,.5)
-    ,0 3px 3px -2px rgba(0,0,0,1)
-    ,inset 0 -230px 60px -200px rgba(255,255,255,.2)
-    ,inset 0 220px 40px -200px rgba(0,0,0,.3);
-  display: block;
-  font-size: 17px;
-  height: 60px;
-  position: relative;
-  transition: all 0.2s;
-  width: 40px;
-}
-
-.back {
-  background-color: #000;
-  background-image: -webkit-linear-gradient(0deg, transparent 30%, transparent 65%)
-    ,-webkit-linear-gradient(0deg, rgba(245, 245, 245, 0) 30%, rgba(150,150,150,.1) 50%, rgba(150,150,150,0) 70%);
-  border-radius: 115px;
-  box-sizing: border-box;
-  height: 85px;
-  padding: 4px 4px;
-  transition: all 0.2s;
-  width: 50px;
-}
-
-input:checked + .back .on,input:checked + .back .off {
-  text-shadow: inset 1px 1px 1px black;
-}
-
-input:checked + .back .on {
-  color: rgb(141, 141, 141);
-  top: 10px;
-  transform: scaleY(0.85);
-}
-
-input:checked + .back .off {
-  color: #fff;
-  bottom: 5px;
-  transform: scaleY(1);
-}
-
-input:checked + .back .but {
-  background: #232323;
-  background-image: -webkit-radial-gradient(55% 18%,circle closest-corner,rgba(0,0,0,.3) ,rgba(0,0,0,0));
-  border-radius: 410px 410px 410px 410px / 310px 310px 410px 410px;
-  box-shadow: inset 8px -4px 5px -7px rgba(0,0,0,1)
-    ,inset -8px -4px 5px -7px rgba(0,0,0,1)
-    , 0 -3px 8px -4px rgba(250,250,250,.4)
-    ,inset 0 3px 4px -2px rgba(10,10,10,1)
-    ,inset 0 280px 40px -200px rgba(0,0,0,.2)
-    ,inset 0 -200px 40px -200px rgba(180,180,180,.2);
-  margin-top: 20px;
-}
-
-input:checked + .back {
-  background-image: -webkit-linear-gradient(90deg, black 30%, transparent 65%)
-    ,-webkit-linear-gradient(180deg, rgba(250,250,250,0) 0%, rgba(250,250,250,.4) 50%, rgba(150,150,150,0) 100%);
-  box-shadow: 28px 28px 28px -28px rgba(0,0,0,.1)
-    ,-28px 28px 28px -22px rgba(0,0,0,.1)
-    ,0 30px 30px 0px rgba(0,0,0,.2)
-    ,inset 0 1px 2px 0 rgba(0,0,0,.6);
-  padding: 2px 4px;
-}
-
-.l,.r {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.round,#onoff,.back,.but,.on,.off {
-  user-select: none;
-}
-</style>
-
-<br><br>
-
-<!--##########################-->
-
-<input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button">
-<label for="favorite" class="container">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-  <div class="action">
-    <span class="option-1">Add to Favorites</span>
-    <span class="option-2">Added to Favorites</span>
-  </div>
-</label>
-
-<style>
-
-    /* From uiverse.io by @barisdogansutcu */
-label {
- background-color: white;
- display: flex;
- align-items: center;
- gap: 14px;
- padding: 10px 15px 10px 10px;
- cursor: pointer;
- user-select: none;
- border-radius: 10px;
- box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
- color: black;
-}
-
-input {
- display: none;
-}
-
-input:checked + label svg {
- fill: hsl(0deg 100% 50%);
- stroke: hsl(0deg 100% 50%);
- animation: heartButton 1s;
-}
-
-@keyframes heartButton {
- 0% {
-  transform: scale(1);
- }
-
- 25% {
-  transform: scale(1.3);
- }
-
- 50% {
-  transform: scale(1);
- }
-
- 75% {
-  transform: scale(1.3);
- }
-
- 100% {
-  transform: scale(1);
- }
-}
-
-input + label .action {
- position: relative;
- overflow: hidden;
- display: grid;
-}
-
-input + label .action span {
- grid-column-start: 1;
- grid-column-end: 1;
- grid-row-start: 1;
- grid-row-end: 1;
- transition: all .5s;
-}
-
-input + label .action span.option-1 {
- transform: translate(0px,0%);
- opacity: 1;
-}
-
-input:checked + label .action span.option-1 {
- transform: translate(0px,-100%);
- opacity: 0;
-}
-
-input + label .action span.option-2 {
- transform: translate(0px,100%);
- opacity: 0;
-}
-
-input:checked + label .action span.option-2 {
- transform: translate(0px,0%);
- opacity: 1;
-}
-
-</style>
 
 
 </body>
+
 </html>
